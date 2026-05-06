@@ -28,9 +28,6 @@ function ListaUsuarios () {
             </div>
         )
 
-    
-        
-
 }
 
 export default ListaUsuarios;
