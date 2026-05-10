@@ -6,6 +6,7 @@ import EjercicioMap from './pages/EjercicioMap'
 import EjercicioApi from './pages/EjercicioApi'
 import Contador from './components/Contador'
 import ListaGimnasios from './components/ListaGimnasios'
+import DetalleMascota from './pages/DetalleMascota'
 
 
 function App(){
@@ -29,6 +30,8 @@ function App(){
         <Route path="/ejercicioapi" element={<EjercicioApi />} />
         <Route path="/contador" element={<Contador />} />
         <Route path="/listagimnasios" element={<ListaGimnasios />} />
+        <Route path="/mascota/:nombre" element={<DetalleMascota />} />
+        <Route path='*' element={<h1>404 Not Found</h1>} />
       </Routes>
     </div>
   )
