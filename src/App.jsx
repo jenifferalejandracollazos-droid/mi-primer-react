@@ -7,10 +7,14 @@ import EjercicioApi from './pages/EjercicioApi'
 import Contador from './components/Contador'
 import ListaGimnasios from './components/ListaGimnasios'
 import DetalleMascota from './pages/DetalleMascota'
+import UserContext from './context/UserContext'
 
 
 function App(){
-  return(     
+  const usuario = {nombre: "Jeniffer Collazos", rol: "Frontend Developer"}
+  
+  return( 
+    <UserContext.Provider value={usuario}>
     <div>
       <nav>
         <Link to="/">Home</Link>
@@ -34,6 +38,7 @@ function App(){
         <Route path='*' element={<h1>404 Not Found</h1>} />
       </Routes>
     </div>
+    </UserContext.Provider>
   )
 }
 

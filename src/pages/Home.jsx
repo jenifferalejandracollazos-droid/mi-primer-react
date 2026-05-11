@@ -1,26 +1,15 @@
-import useLocalStorage from "../hooks/useLocalStorage";
+import { useContext } from "react"
+import UserContext from "../context/UserContext"
 
-function Home() {
-  const [nombre, setNombre] = useLocalStorage("nombre", "");
-  const frutas = ["Manzana", "Banano", "Mango", "Fresa"];
+function Home(){
+  const usuario = useContext(UserContext)
 
   return (
     <div>
-      <input
-        type="text"
-        value={nombre}
-        onChange={(e) => setNombre(e.target.value)}
-        placeholder="Escribe tu nombre"
-      />
-      <p>Hola, {nombre}</p>
-      <h1>Lista de frutas</h1>
-      <ul>
-        {frutas.map((fruta, index) => (
-          <li key={index}>{fruta}</li>
-        ))}
-      </ul>
+      <h1>Bienvenida, {usuario.nombre}!</h1>
+      <h2>Tu rol es: {usuario.rol}</h2>
     </div>
-  );
+  )
 }
 
 export default Home;
