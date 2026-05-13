@@ -8,6 +8,7 @@ import Contador from './components/Contador'
 import ListaGimnasios from './components/ListaGimnasios'
 import DetalleMascota from './pages/DetalleMascota'
 import UserContext from './context/UserContext'
+import EjercicioFormulario from './pages/EjercicioFormulario'
 
 
 function App(){
@@ -24,6 +25,7 @@ function App(){
         <Link to="/ejercicioapi">Ejercicio Api</Link>
         <Link to="/contador">Contador</Link>
         <Link to="/listagimnasios">Lista Gimnasios</Link>
+        <Link to="/ejercicioformulario">Ejercicio Formulario</Link>
       </nav>
 
       <Routes>
@@ -35,6 +37,7 @@ function App(){
         <Route path="/contador" element={<Contador />} />
         <Route path="/listagimnasios" element={<ListaGimnasios />} />
         <Route path="/mascota/:nombre" element={<DetalleMascota />} />
+        <Route path="/ejercicioformulario" element={<EjercicioFormulario />} />
         <Route path='*' element={<h1>404 Not Found</h1>} />
       </Routes>
     </div>
